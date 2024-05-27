@@ -1,5 +1,5 @@
 # R-Smugg
-HTTP Smuggler V 1.0
+HTTP Smuggler Scanner V 1.0
 ####
 ```
 
@@ -15,7 +15,7 @@ HTTP Smuggler V 1.0
                                                     |  $$$$$$/|  $$$$$$/
                                                      \______/  \______/ 
 ========================================================================
-[*] [HTTP Smuggler V 1.0] [Afrizal F.A - R&D ICWR]
+[*] [HTTP Smuggler Scanner V 1.0] [Afrizal F.A - R&D ICWR]
 ========================================================================
 
 usage: R-Smuggler.py [-h] -x HOST [-p PORT] [-s SSL] [-d PATH]
