@@ -83,14 +83,14 @@ class R_Smuggler:
 
             if '200' in status_code:
 
-                output = f"[+] [HOST: {host}] [PORT: {port}] [PATH: {self.path}] [Payload: {payload_name}] [Vuln HTTP Status Code: {status_code}]"
+                output = f"[+] [Vuln] [HOST: {host}] [PORT: {port}] [PATH: {self.path}] [Payload: {payload_name}] [HTTP Status Code: {status_code}]"
                 print(output)
 
                 self.result += "\n{}".format(output)
 
             else:
 
-                print(f"[-] [HOST: {host}] [PORT: {port}] [PATH: {self.path}] [Payload: {payload_name}] [Not Vuln HTTP Status Code: {status_code}]")
+                print(f"[-] [Not Vuln] [HOST: {host}] [PORT: {port}] [PATH: {self.path}] [Payload: {payload_name}] [HTTP Status Code: {status_code}]")
                 pass
 
             sock.close()
