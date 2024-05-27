@@ -21,7 +21,7 @@ import argparse
 import atexit
 from concurrent.futures import ThreadPoolExecutor as T
 
-class R_Smuggler:
+class R_Smugg:
 
     def atExitFunc(self):
 
@@ -127,5 +127,5 @@ if __name__ == "__main__":
     parser.add_argument("-d", "--path", help = "URL Path Target")
     args = parser.parse_args()
 
-    smuggler = R_Smuggler(args.host, args.port, args.ssl, args.path)
-    smuggler.proc()
+    smugg = R_Smugg(args.host, args.port, args.ssl, args.path)
+    smugg.proc()
