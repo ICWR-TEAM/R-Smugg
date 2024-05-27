@@ -34,6 +34,7 @@ class R_Smugg:
 
         else:
 
+            print("")
             print("[-] [No result]")
 
     def payloads(self, host):
