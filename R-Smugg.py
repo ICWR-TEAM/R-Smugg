@@ -27,6 +27,7 @@ class R_Smuggler:
 
         if self.result != '':
 
+            print("")
             print("[+] [Result]")
             print("")
             print(self.result)
