@@ -116,6 +116,9 @@ class R_Smugg:
                 print(output)
 
                 self.result += "\n{}".format(output)
+                self.result += "\n[*] [--- Header Request ---]"
+                self.result += "\n{}".format(payload)
+                self.result += "\n[*] [--- End Header Request ---]\n"
 
             else:
 
