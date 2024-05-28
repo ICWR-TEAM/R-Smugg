@@ -23,6 +23,16 @@ from concurrent.futures import ThreadPoolExecutor as T
 
 class R_Smugg:
 
+    def __init__(self, host, port = 80, ssl = '', path = ""):
+
+        self.host = host
+        self.port = port if port else 80
+        self.ssl = ssl
+        self.path = ("/{}".format(path) if path[0] != '/' else path) if path else "/"
+        self.result = ''
+
+        atexit.register(self.atExitFunc)
+
     def atExitFunc(self):
 
         if self.result != '':
@@ -138,16 +148,6 @@ class R_Smugg:
             for payload_name, payload in self.payloads(self.host).items():
 
                 executor.submit(self.smuggling, self.host, self.port, self.ssl, payload_name, payload)
-
-    def __init__(self, host, port = 80, ssl = '', path = ""):
-
-        self.host = host
-        self.port = port if port else 80
-        self.ssl = ssl
-        self.path = ("/{}".format(path) if path[0] != '/' else path) if path else "/"
-        self.result = ''
-
-        atexit.register(self.atExitFunc)
 
 if __name__ == "__main__":
 
