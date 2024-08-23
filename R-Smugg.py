@@ -77,11 +77,11 @@ class R_Smugg:
                 future.result()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='HTTP Smuggler Scanner')
-    parser.add_argument('--host', required=True, help='Target host')
-    parser.add_argument('--port', type=int, default=80, help='Target port')
-    parser.add_argument('--ssl', action='store_true', help='Use SSL (https)')
-    parser.add_argument('--path', default='', help='Target path')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-x", "--host", help = "HOST Target", required = True)
+    parser.add_argument("-p", "--port", help = "PORT (Default 80)", type = int)
+    parser.add_argument("-s", "--ssl", help = "Use SSL (Y/N) (Default: N)")
+    parser.add_argument("-d", "--path", help = "URL Path Target")
     
     args = parser.parse_args()
 
